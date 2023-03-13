@@ -58,3 +58,58 @@ console.log(tempArray1 === tempArray2);
 for(let i=0; i<5; i++){
     console.log(i+1);
 }
+// else{
+//     console.log("End of the for loop")
+// }
+
+
+let myArray2 = [[1,2,3,4], [5,6,7,8], [9,10,11,12],[13,14,15,16]];
+
+for(let i=0; i<myArray2.length; i++){
+    for(let j=0; j<myArray2[i].length; j++){
+        console.log(myArray2[i][j]);
+    }
+}
+
+let i=0;
+while(i<5){
+    console.log(i);
+    i++;
+}
+
+for(let i=1; i<=10; i++){
+    console.log(i);
+    if(i==5){
+        console.log("Breaking at ", i);
+        break;
+    }
+}
+
+let artists = ["Arijit Singh", "Simpal Kharel", "Darshan Raval", "Zaeden", "Alan Walker"];
+for(let artist of artists){
+    console.log(artist);
+}
+
+let matrix = [[1,2,3],[4,5,6],[7,8,9]];
+for(let row of matrix){
+    let sum = 0;
+    for(let num of row){
+        sum+=num;
+    }
+    console.log(sum);
+}
+
+let newObject =  {
+    name : "Arpit",
+    age : 22, 
+    company : "Argusoft",
+    interests : ["Competitive Programming", "Gaming", "Reading"]
+}
+
+for(let key of Object.keys(newObject)){
+    console.log(key, newObject[key]);
+}
+
+for(let key in newObject){
+    console.log(key, newObject[key]);
+}
