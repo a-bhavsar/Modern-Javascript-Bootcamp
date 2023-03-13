@@ -49,3 +49,12 @@ console.log(newArray);
 const myNewArray = [0,0123, 4567, 7888454548445454545454554545, 1000000000000000000000000000, 700000000000000000000000000000000000000000000000000000000000000000];
 myNewArray.sort()
 console.log(myNewArray);
+
+let tempArray1 = [1,2,3];
+let tempArray2 = [1,2,3];
+console.log(tempArray1 == tempArray2);
+console.log(tempArray1 === tempArray2);
+
+for(let i=0; i<5; i++){
+    console.log(i+1);
+}
