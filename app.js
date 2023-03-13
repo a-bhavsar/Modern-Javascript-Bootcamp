@@ -113,3 +113,85 @@ for(let key of Object.keys(newObject)){
 for(let key in newObject){
     console.log(key, newObject[key]);
 }
+
+function rollDie(){
+    let roll = Math.floor(Math.random() * 6) + 1;
+    console.log(`Rolled: ${roll}`);
+}
+
+for(let i=1; i<=5; i++){
+    rollDie();
+}
+
+function greet(nickname) {
+    console.log("Hi",nickname);
+}
+
+greet("Arpit");
+
+function sum(x, y){
+    return x+y;
+}
+
+let mySum = sum(3,5);
+console.log(mySum);
+
+function isValidPassword(password, username){
+    if(password.length >= 8){
+        if(password.indexOf(" ")===-1){
+            if(password.indexOf(username)===-1){
+                return true;
+            }
+            return false;
+        } 
+        return false;
+    }
+    return false;
+}
+
+let flag = isValidPassword('adadadaad', 'arpit');
+let flag2 = isValidPassword('arpit123', 'arpit');
+console.log(flag, flag2);
+
+
+function average(arr){
+    let sum = 0;
+    for(let num of arr){
+        sum+=num;
+    }
+    return sum/arr.length;
+}
+
+let myAvg = average([2,5]);
+console.log(myAvg);
+
+myAvg = average([1,2,3,4,5,6,7,8,9,10]);
+console.log(myAvg);
+
+function isPangram(str){
+    str = str.toLowerCase();
+    // console.log(str);
+    for(let char = 97; char<=122; char++){
+        char = String.fromCharCode(char);
+        // console.log(char);
+        if(str.indexOf(char)===-1){
+            // console.log("Returning false");
+            return false;
+        }
+        char = char.charCodeAt(0);
+        // console.log(char);
+    }
+    return true;
+}
+
+console.log(isPangram("The five boxing wizards jump quick"));
+
+function getCard(){
+    const values = ['2', '3','4','5','6','7','8','9','A','J','Q','K'];
+    const houses = ["Clubs", "Spades", "Hearts", "Diamonds"]
+    const values_random = Math.floor(Math.random()*values.length)+1;
+    const houses_random = Math.floor(Math.random()*houses.length)+1;
+    return `You got ${values[values_random]} of ${houses[houses_random]}`;
+}
+
+console.log(getCard());
