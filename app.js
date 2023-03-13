@@ -23,3 +23,29 @@ else{
 }
 
 (rating) ? console.log("hehe") : console.log("Woho");
+
+let myArray = [1, 4.23, "ARPIT", "BANSI", true, NaN, undefined];
+console.log(myArray);
+myArray[7] = "Hehe";
+console.log(myArray);
+myArray[100] = "Hehe";
+console.log(myArray);
+myArray.push("Yoho");
+console.log(myArray);
+myArray.pop()
+console.log(myArray);
+myArray.shift()
+console.log(myArray);
+myArray.unshift("423");
+console.log(myArray);
+
+let firstArray = ["hehe", "woho"];
+let secondArray = ["KTMBK", "Darasal"];
+let newArray = firstArray.concat(secondArray);
+console.log(newArray);
+
+
+
+const myNewArray = [0,0123, 4567, 7888454548445454545454554545, 1000000000000000000000000000, 700000000000000000000000000000000000000000000000000000000000000000];
+myNewArray.sort()
+console.log(myNewArray);
