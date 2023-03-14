@@ -342,3 +342,45 @@ const voteObj = votes.reduce((accumulator, currValue)=>{
     return accumulator;
 }, {})
 console.log(voteObj);
+
+
+function multiply(x, y=0){
+    return x*y;
+}
+
+console.log(multiply(3));
+
+console.log(Math.max(numbers)); // NaN
+
+console.log(Math.max(...numbers));
+
+const num1 = [1,2,3,4,5];
+const num2 = [6,7,8,9,10];
+const mergedNums = [...num1, ...num2];
+console.log(mergedNums);
+
+for(let friend of friends){
+    console.log(friend);
+    console.log({...friend});
+}
+
+function sum(){
+    console.log(arguments);
+}
+
+const [first, second, third] = numbers;
+console.log(first);
+console.log(second);
+console.log(third);
+
+const {firstName, lastName, semester} = friends[0];
+console.log(firstName, lastName, semester);
+
+let [,,{semester : currSem}] = friends;
+console.log(currSem);
+
+const fullName = ({firstName, lastName}) => {
+    console.log(firstName, lastName);
+}
+
+fullName(friends[0]);
