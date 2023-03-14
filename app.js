@@ -206,8 +206,139 @@ console.log(hello);
 var hello = "Arpit"; // Hoisted
 
 
-console.log(hello2);
-let hello2 = "Arpit"; //Not  Hoisted
+// console.log(hello2);
+// let hello2 = "Arpit"; //Not  Hoisted
 
-console.log(hello3);
-const hello3= "Arpit"; // Not Hoisted
+// console.log(hello3);
+// const hello3= "Arpit"; // Not Hoisted
+
+const numbers = [1,2,3,4,5,6,7,8,9];
+numbers.forEach(function(el){
+    console.log(el);
+})
+
+function hehe(){
+    console.log("hehe");
+}
+
+numbers.forEach(hehe);
+
+const doubleNumbers = numbers.map(function(el){
+    return el * 2;
+});
+
+console.log(doubleNumbers);
+
+const names = ["Arpit", "Bansi", "Raj", "Sanskruti", "Alibaba00"];
+const newNames = names.map(function(name){
+    return name.split("").join("..")
+})
+console.log(newNames);
+
+let newFunction = (x) => {
+    return x*x;
+}
+
+console.log(newFunction(2));
+
+const name = names.find(n=>n.toLowerCase().startsWith('a'));
+console.log(name);
+
+const odds = numbers.filter(num => num%2===1);
+console.log(odds);
+
+const evens = numbers.filter(num => num%2!==1);
+console.log(evens);
+
+const boolValue = numbers.every(n => n==10);
+console.log(boolValue);
+
+const boolValue1 = numbers.some(n => n==1);
+console.log(boolValue1);
+
+const boolValue2 = numbers.some(n => "Truthy");
+console.log(boolValue2);
+
+const boolValue3 = numbers.some(n => "");
+console.log(boolValue3);
+
+const ascendingSort = [43,56,1,2,789,42];
+ascendingSort.sort((a,b) => a-b);
+console.log(ascendingSort);
+
+const descendingSort = [43,56,1,2,789,42];
+descendingSort.sort((a,b) => b-a);
+console.log(descendingSort);
+
+const friends = [
+    {
+        firstName : "Arpit",
+        lastName : "Z",
+        semester : 8
+    },
+    {
+        firstName : "Bansi",
+        lastName : "Gadhvi",
+        semester : 4
+    },
+    {
+        firsobjecttName : "Sanskruti",
+        lastName : "Sirsat",
+        semester : 8
+    },
+    {
+        firstName : "Raj",
+        lastName:undefined,
+        semester : -1
+    },
+    {
+        firsobjecttName : "Bansi",
+        lastName : "Gadhvi",
+        semester : 4
+    },
+    {
+        firstName : "Sanskruti",
+        lastName : "Sirsat",
+        semester : 8
+    },
+    {
+        firstName : "Sanskruti",
+        lastName : "Zxy",
+        semester : 8
+    }
+        
+]
+console.log("=======",friends);
+function compare( a, b ) {
+    if ( a.lastName < b.lastName ){
+      return -1;
+    }
+    if ( a.lastName > b.lastName ){
+      return 1;
+    }
+    return 0;
+  }
+friends.sort(compare)
+console.log("x8f6xc86s",friends);
+
+const product = numbers.reduce((total, currValue)=> total*currValue);
+console.log(product);
+
+const votes = [true, false, true, true, true, false, true, true, true, false];
+
+const voteObj = votes.reduce((accumulator, currValue)=>{
+    if(!accumulator['true']){
+        accumulator['true'] = 0;
+    }
+    if(!accumulator['false']){
+        accumulator['false'] = 0;
+    }
+    if(currValue===true){
+        accumulator['true']++;
+    }
+    else{
+        accumulator['false']++;
+    }
+    return accumulator;
+}, {})
+console.log(voteObj);
