@@ -191,7 +191,23 @@ function getCard(){
     const houses = ["Clubs", "Spades", "Hearts", "Diamonds"]
     const values_random = Math.floor(Math.random()*values.length)+1;
     const houses_random = Math.floor(Math.random()*houses.length)+1;
+    console.log("hehe");
     return `You got ${values[values_random]} of ${houses[houses_random]}`;
 }
 
 console.log(getCard());
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', function(){
+    alert("Yoho");
+});
+
+console.log(hello);
+var hello = "Arpit"; // Hoisted
+
+
+console.log(hello2);
+let hello2 = "Arpit"; //Not  Hoisted
+
+console.log(hello3);
+const hello3= "Arpit"; // Not Hoisted
