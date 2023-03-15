@@ -384,3 +384,66 @@ const fullName = ({firstName, lastName}) => {
 }
 
 fullName(friends[0]);
+
+const role = "host";
+const person = "Teni";
+
+const team = {};
+team[role] = person;
+console.log(team);
+
+const methodObj = {
+    add : function(x, y){
+        return x+y;
+    }
+}
+
+console.log(methodObj.add(2,3));
+
+const shortHandObj = {
+    add(x, y){
+        return x+y;
+    }
+}
+
+console.log(shortHandObj.add(2,3));
+
+const person2 = {
+    first : "Arpit",
+    last : "Bhavsar",
+    nickName : "lazydev01",
+    fullName(){
+        return `${this.first} ${this.last} AKA ${this.nickName}`;
+    },
+    printBio(){
+        console.log(this);
+        const fullName = this.fullName();
+        console.log(`${fullName} is a person`);
+    },
+    laugh : ()=>{
+        console.log(this);
+        console.log("Laugh Called");
+    }
+}
+
+person2.fullName();
+const printBio = person2.printBio;
+// printBio();
+
+const annoyer = {
+    phrases : ["a", "b", "c", "d", "e", "f", "g", "h"],
+    pickPhrase(){
+        return this.phrases[Math.floor( Math.random() * this.phrases.length) + 1];
+    },
+    start(){
+        this.timerId = setInterval(()=>{
+            console.log(this.pickPhrase());
+        }, 3000)
+    },
+    stop(){
+        clearInterval(this.timerId);
+    }
+}
+
+annoyer.start();
+annoyer.stop();
